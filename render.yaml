@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: node-red
+    env: docker
+    plan: free
+    autoDeploy: true
+    region: singapore
+    dockerContext: .
+    dockerfilePath: ./Dockerfile
+    envVars:
+      - key: NODE_RED_ENABLE_PROJECTS
+        value: true
